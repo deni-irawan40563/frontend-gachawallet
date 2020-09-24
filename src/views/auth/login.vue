@@ -17,7 +17,7 @@
                      Zwallet wherever you are. Desktop, laptop, mobile phone?<br>
                     we cover all of that for you!
                 </p>
-                <FormLogin />
+                <FormLogin /> <!--Bagian form login mengandung komponent dari form email sampai link ke sign up-->
             </b-container>
       </b-col>
   </b-row>

@@ -1,6 +1,7 @@
+<!-- komponent side bar auth ini adalah component yang mengandung sytling untuk sidebar yang ada di samping semua halaman di folder auth -->
 <template>
   <div class="text-center backgroud">
-      <h4 class="text-white text-left ml-5 mt-2">Gacha Wallet</h4>
+      <h4 class="text-white text-left ml-5 mt-3">Gacha Wallet</h4>
       <img src="../assets/hero-image-auth.png">
       <b-container class="text-white text-left pl-5 pr-5 ml-5">
             <h2 class="font-weight-bold h2-size">App that Covering Banking Needs.</h2>
