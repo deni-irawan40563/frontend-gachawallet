@@ -19,28 +19,8 @@
         </b-row>
         <div class="border-bottom"></div><!-- handle border bottom -->
       </b-form-group>
-<!-- form password -->
-      <b-form-group id="input-group-2" label-for="input-2">
-        <b-row>
-            <b-icon icon="lock" variant="secondary" class="col-1 mt-2 mx-auto"></b-icon><!-- handle icon kunci -->
-            <b-form-input
-            type="password"
-            id="input-2"
-            v-model="form.password"
-            required
-            placeholder="Enter your password"
-            class=" border-0 col-11"
-            ></b-form-input>
-        </b-row>
-        <div class="border-bottom"></div><!-- handle border bottom -->
-      </b-form-group>
-        <div class="text-right mt-2 mb-5">
-            <router-link to="/resetpassword" class="text-muted">Forgot password?</router-link>
-        </div>
-        <b-button type="submit" variant="secondary" class="buttom-style mt-5" block >Login</b-button>
-        <div class="text-center mt-5">
-            <p>Don’t have an account? Let’s <router-link to="/signup">Sign Up</router-link></p>
-        </div>
+
+        <b-button type="submit" variant="secondary" class="buttom-style mt-5" block >Confirm</b-button>
     </b-form>
   </div>
 </template>
@@ -51,8 +31,7 @@ export default {
   data () {
     return {
       form: {
-        email: '',
-        password: ''
+        email: ''
       },
       show: true
     }
@@ -66,7 +45,6 @@ export default {
       evt.preventDefault()
       // Reset our form values
       this.form.email = ''
-      this.form.password = ''
       // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
