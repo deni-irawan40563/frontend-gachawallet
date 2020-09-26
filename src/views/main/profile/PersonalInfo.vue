@@ -30,11 +30,20 @@
           </div>
       </div>
       <div class="card mt-3">
-          <div class="text1 ml-3">
-              <h6>Phone Number</h6>
-          </div>
-          <div class="text2 ml-3">
-              <h5 class="font-weight-bolder">+62 813-9387-7946</h5>
+          <div class="row justify-content-between w-100">
+              <div class="col-8">
+                  <div class="text1">
+                    <h6>Phone Number</h6>
+                  </div>
+                  <div class="text2">
+                    <h5 class="font-weight-bolder">+62 813-9387-7946</h5>
+                  </div>
+              </div>
+            <div class="col-2 mt-3">
+              <router-link to="/managePhoneNumber">
+                    Manage
+              </router-link>
+            </div>
           </div>
       </div>
   </div>

@@ -19,6 +19,8 @@ import Profile from '../views/main/Profile.vue'
 import PersonalInfo from '../views/main/profile/PersonalInfo.vue'
 import ChangePassword from '../views/main/profile/ChangePassword.vue'
 import ChangePIN from '../views/main/profile/ChangePIN.vue'
+import ManagePhoneNumber from '../views/main/profile/ManagePhoneNumber.vue'
+import AddPhoneNumber from '../views/main/profile/AddPhoneNumber.vue'
 
 Vue.use(VueRouter)
 
@@ -80,6 +82,14 @@ const routes = [
       {
         path: '/changePIN',
         component: ChangePIN
+      },
+      {
+        path: '/managePhoneNumber',
+        component: ManagePhoneNumber
+      },
+      {
+        path: '/addPhoneNumber',
+        component: AddPhoneNumber
       }
     ]
   }
