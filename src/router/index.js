@@ -13,6 +13,9 @@ import Transfer from '../views/main/Transfer.vue'
 import TopUp from '../views/main/TopUp.vue'
 import Profile from '../views/main/Profile.vue'
 
+// untuk coba-coba aja
+import CobaCoba from '../views/CobaCoba.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -58,6 +61,11 @@ const routes = [
         component: Profile
       }
     ]
+  },
+  {
+    path: '/cobacoba',
+    name: 'cobacoba',
+    component: CobaCoba
   }
 ]
 
