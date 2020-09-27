@@ -61,6 +61,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'FormRegister',
   data () {
@@ -74,9 +75,19 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['register']),
+
     onSubmit (evt) {
       evt.preventDefault()
-      alert(JSON.stringify(this.form))
+      const data = {
+        username: this.form.username,
+        email: this.form.email,
+        password: this.form.password
+      }
+
+      this.register(data).then((res) => {
+        console.log('sukses register')
+      })
     },
     onReset (evt) {
       evt.preventDefault()

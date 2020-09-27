@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'formlogin',
   data () {
@@ -37,9 +38,16 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['forgotPassword']),
     onSubmit (evt) {
       evt.preventDefault()
-      alert(JSON.stringify(this.form))
+      // alert(JSON.stringify(this.form))
+      const data = {
+        email: this.form.email
+      }
+      this.forgotPassword(data).then((res) => {
+        alert('cek email')
+      })
     },
     onReset (evt) {
       evt.preventDefault()

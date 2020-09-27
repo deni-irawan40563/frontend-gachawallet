@@ -10,12 +10,27 @@ import Vue from 'vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { mapGetters, mapActions } from 'vuex'
+
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 // sampai sini
 
 export default {
-  name: 'app'
+  name: 'app',
+  computed: {
+    ...mapGetters({
+      token: 'token'
+    })
+  },
+  methods: {
+    ...mapActions(['interceptorsRequest']),
+    ...mapActions(['interceptorsResponse'])
+  },
+  created () {
+    this.interceptorsRequest()
+    this.interceptorsResponse()
+  }
 }
 </script>
 
