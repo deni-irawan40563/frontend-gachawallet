@@ -6,7 +6,16 @@ import Register from '../views/auth/Register.vue'
 import CreatePin from '../views/auth/CreatePin.vue'
 import ResetPassword from '../views/auth/ResetPassword.vue'
 import ChangePassword from '../views/auth/ChangePassword.vue'
+
 import Main from '../views/Main.vue'
+// component child di main
+import Dasboard from '../views/main/Dasboard.vue'
+import Transfer from '../views/main/Transfer.vue'
+import TopUp from '../views/main/TopUp.vue'
+import Profile from '../views/main/Profile.vue'
+
+// untuk coba-coba aja
+import CobaCoba from '../views/CobaCoba.vue'
 
 import store from '../store/index'
 
@@ -48,6 +57,29 @@ const routes = [
     name: 'main',
     component: Main,
     meta: { requiresAuth: true }
+    children: [
+      {
+        path: '/dasboard',
+        component: Dasboard
+      },
+      {
+        path: '/transfer',
+        component: Transfer
+      },
+      {
+        path: '/topup',
+        component: TopUp
+      },
+      {
+        path: '/profile',
+        component: Profile
+      }
+    ]
+  },
+  {
+    path: '/cobacoba',
+    name: 'cobacoba',
+    component: CobaCoba
   }
 ]
 
