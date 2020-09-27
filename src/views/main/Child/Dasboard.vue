@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import MainCardDash from '../../components/MainCardDash'
+import MainCardDash from '../../../components/MainPage/MainCardDash'
 
 export default {
   name: 'dasboard',

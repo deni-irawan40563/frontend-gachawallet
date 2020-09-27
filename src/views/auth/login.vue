@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import SideBarAuth from '../../components/SideBarAuth'
-import FormLogin from '../../components/FormLogin'
+import SideBarAuth from '../../components/AuthPage/Global/SideBarAuth'
+import FormLogin from '../../components/AuthPage/FormLogin'
 
 export default {
   name: 'Login',

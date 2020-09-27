@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import Collapse from '../components/CobaCollapse'
+import Collapse from '../MainPage/CobaCollapse'
 export default {
   name: 'SearchReceiver',
   components: {

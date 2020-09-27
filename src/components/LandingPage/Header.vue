@@ -9,7 +9,7 @@
       <div class="row mt-5">
           <div class="col-12 align-middle">
                 <router-link to="/signup"><button class="btn btn-light rounded">Sign Up</button></router-link>
-               <router-link to="/"><button class="btn btn-light rounded mr-5">Login</button></router-link>
+               <router-link to="/login"><button class="btn btn-light rounded mr-5">Login</button></router-link>
               <div class="row"><h5><span>Gacha Wallet</span></h5></div>
               <div class="row mt-5 mr-5 text-left text-box1"><h1><b>Awesome App For Saving <span>Time.</span></b></h1></div>
               <div class="row mt-3 mr-5 text-left text-box1"><h6>We bring you a mobile app for banking problems that oftenly wasting much of your times.</h6></div>

@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import SideBarAuth from '../../components/SideBarAuth'
-import FormResetPass from '../../components/FormResetPass'
+import SideBarAuth from '../../components/AuthPage/Global/SideBarAuth'
+import FormResetPass from '../../components/AuthPage/FormResetPass'
 
 export default {
   name: 'ResetPassword',

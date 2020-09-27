@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import SideBarAuth from '../../components/SideBarAuth'
-import FormRegister from '../../components/FormRegister'
+import SideBarAuth from '../../components/AuthPage/Global/SideBarAuth'
+import FormRegister from '../../components/AuthPage/FormRegister'
 
 export default {
   name: 'Register',

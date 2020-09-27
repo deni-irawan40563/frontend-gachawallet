@@ -22,12 +22,12 @@
 </template>
 
 <script>
-import MainCardDash from '../components/MainCardDash'
-import TransactionHistoryDash from '../components/TransactionHistoryDash'
-import ChartCard from '../components/ChartCard'
-import SearchReceiver from '../components/SearchReceiver'
-import TopUp from '../components/TopUp'
-import TransferComfirm from '../components/TransferComfirm'
+import MainCardDash from '../components/MainPage/MainCardDash'
+import TransactionHistoryDash from '../components/MainPage/TransactionHistoryDash'
+import ChartCard from '../components/MainPage/ChartCard'
+import SearchReceiver from '../components/MainPage/SearchReceiver'
+import TopUp from '../components/MainPage/TopUp'
+import TransferComfirm from '../components/MainPage/TransferComfirm'
 export default {
   name: 'cobacoba',
   components: {

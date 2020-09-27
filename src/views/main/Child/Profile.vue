@@ -1,7 +1,7 @@
 <template>
   <div class="container p-5 justify-content-center">
       <div class="container-img row justify-content-center">
-        <img src="../../assets/Landing/Rectangle 25.png" alt="">
+        <img src="../../../assets/Landing/Rectangle 25.png" alt="">
       </div>
       <div class="edit mt-2" @click="data">
           <div class="row justify-content-center m-1" >
@@ -88,7 +88,7 @@ export default {
     width: 30px;
     height: 30px;
 
-    background-image: url('../../assets/Landing/pencil.png');
+    background-image: url('../../../assets/Landing/pencil.png');
     background-size: 20px;
     background-repeat: no-repeat;
 }
@@ -114,7 +114,7 @@ a {
 .arrow {
     width: 50px;
     height: 50px;
-    background-image: url('../../assets/Landing/arrow-left.png');
+    background-image: url('../../../assets/Landing/arrow-left.png');
     background-repeat: no-repeat;
 }
 </style>

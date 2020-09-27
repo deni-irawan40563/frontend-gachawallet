@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import BarChart from '../components/BarChart'
+import BarChart from '../MainPage/BarChart'
 export default {
   name: 'cardbar',
   components: {

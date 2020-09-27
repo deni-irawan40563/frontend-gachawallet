@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import MainNavbar from '../components/MainNavbar'
-import MainSidebar from '../components/MainSidebar'
-import Footer from '../components/Footer'
+import MainNavbar from '../../../components/MainPage/Global/MainNavbar'
+import MainSidebar from '../../../components/MainPage/Global/MainSidebar'
+import Footer from '../../../components/MainPage/Global/Footer'
 
 export default {
   name: 'main',

@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import SideBarAuth from '../../components/SideBarAuth'
-import EnterPin from '../../components/EnterPin'
+import SideBarAuth from '../../components/AuthPage/Global/SideBarAuth'
+import EnterPin from '../../components/AuthPage/EnterPin'
 
 export default {
   name: 'CreatePin',
