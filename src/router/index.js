@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import LandingPage from '../views/LandingPage/LandingPage.vue'
+
 import Login from '../views/auth/login.vue'
 import Register from '../views/auth/Register.vue'
 import CreatePin from '../views/auth/CreatePin.vue'
@@ -14,6 +16,13 @@ import Transfer from '../views/main/Transfer.vue'
 import TopUp from '../views/main/TopUp.vue'
 import Profile from '../views/main/Profile.vue'
 
+
+// child profile
+import PersonalInfo from '../views/main/profile/PersonalInfo.vue'
+import ChangePassword from '../views/main/profile/ChangePassword.vue'
+import ChangePIN from '../views/main/profile/ChangePIN.vue'
+import ManagePhoneNumber from '../views/main/profile/ManagePhoneNumber.vue'
+import AddPhoneNumber from '../views/main/profile/AddPhoneNumber.vue'
 // untuk coba-coba aja
 import CobaCoba from '../views/CobaCoba.vue'
 
@@ -47,6 +56,12 @@ const routes = [
     meta: { requiresVisitor: true }
   },
   {
+    path: '/landingPage',
+    name: 'LandingPage',
+    component: LandingPage
+  },
+  {
+    path: '/main',
     path: '/changepassword',
     name: 'ChangePassword',
     component: ChangePassword,
@@ -73,6 +88,26 @@ const routes = [
       {
         path: '/profile',
         component: Profile
+      },
+      {
+        path: '/personalInfo',
+        component: PersonalInfo
+      },
+      {
+        path: '/changePassword',
+        component: ChangePassword
+      },
+      {
+        path: '/changePIN',
+        component: ChangePIN
+      },
+      {
+        path: '/managePhoneNumber',
+        component: ManagePhoneNumber
+      },
+      {
+        path: '/addPhoneNumber',
+        component: AddPhoneNumber
       }
     ]
   },
