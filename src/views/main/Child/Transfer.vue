@@ -1,15 +1,19 @@
 <template>
   <div>
-      <router-view />
+      <SearchReceiver class="mr-5"/>
   </div>
 </template>
 
 <script>
+import SearchReceiver from '../../../components/MainPage/SearchReceiver'
 export default {
-  name: 'Transfer'
+  name: 'Transfer',
+  components: {
+    SearchReceiver
+  }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

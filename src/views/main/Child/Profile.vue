@@ -25,7 +25,7 @@
         </div>
       </div>
       </router-link>
-      <a href="/changePassword">
+      <router-link to="/changePassword">
       <div class="menu row justify-content-center mt-3">
         <div class="card row justify-content-between">
           <div class="col-10 ml-0">
@@ -36,7 +36,7 @@
           </div>
         </div>
       </div>
-      </a>
+      </router-link>
       <router-link to="/changePIN">
        <div class="menu row justify-content-center mt-3">
         <div class="card row justify-content-between">

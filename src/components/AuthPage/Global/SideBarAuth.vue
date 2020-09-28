@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .backgroud {
     background-image: url('../../../assets/backgroud-sideBar-auth.svg');
     background-repeat: no-repeat;

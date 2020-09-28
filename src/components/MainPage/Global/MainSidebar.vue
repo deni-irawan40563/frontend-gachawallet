@@ -1,5 +1,5 @@
 <template>
-    <b-container class="bg-white w-25 ml-0 mt-4 ml-5 h">
+    <b-container class="bg-white ml-0 mt-4 h">
             <b-list-group class="border-0 pt-3">
                 <router-link to="/dasboard" class="text-dark"><b-list-group-item class="border-0 mt-3"><b-icon icon="grid" variant="secondary" font-scale="1" class="mr-2"></b-icon>Dashboard</b-list-group-item></router-link>
                 <router-link to="/transfer" class="text-dark"><b-list-group-item class="border-0 mt-3"><b-icon icon="arrow-up" variant="secondary" font-scale="1" class="mr-2"></b-icon>Transfer</b-list-group-item></router-link>
@@ -28,5 +28,10 @@ ul li .style {
 }
 .handle-buttom {
     margin-bottom: 0;
+}
+@media (max-width: 576px) {
+    .h {
+        display: none;
+    }
 }
 </style>

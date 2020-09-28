@@ -1,16 +1,24 @@
 <template>
-  <div>
-    <MainNavbar />
-    <div class="container-fluid">
-      <div class="row">
-        <MainSidebar class="h"/>
-        <div class="container-main mt-4 border rounded">
-          <router-view />
-        </div>
-      </div>
-    </div>
-    <Footer />
-  </div>
+  <b-row>
+    <b-col>
+        <MainNavbar class="col-12" />
+    </b-col>
+    <div class="w-100"></div>
+    <b-col>
+      <b-row>
+        <b-col cols="3">
+          <MainSidebar/>
+        </b-col>
+        <b-col cols="9">
+          <router-view/>
+        </b-col>
+      </b-row>
+    </b-col>
+    <div class="w-100"></div>
+    <b-col>
+        <Footer class="col-12"/>
+    </b-col>
+  </b-row>
 </template>
 
 <script>

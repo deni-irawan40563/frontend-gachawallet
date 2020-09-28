@@ -1,8 +1,8 @@
 <template>
-  <div class="mt-4 ml-5 bg-white">
+  <div class="mt-2 bg-white">
 
 <!-- ini ke bawah tinggal di hapus aja sisanya tinggal di looping -->
-        <ul class="list-group w-75 card-style pt-5 pb-5">
+        <ul class="list-group card-style pt-3 pb-2">
             <!-- ini jangan di looping ini untuk text yang di atas -->
             <div class="ml-2 pb-4 row">
                 <h5 class="col-8">Transaction History</h5>

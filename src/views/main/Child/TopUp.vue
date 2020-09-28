@@ -1,15 +1,19 @@
 <template>
   <div>
-      <router-view />
+      <TopUp />
   </div>
 </template>
 
 <script>
+import TopUp from '../../../components/MainPage/TopUp'
 export default {
-  name: 'topup'
+  name: 'topup',
+  components: {
+    TopUp
+  }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

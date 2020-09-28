@@ -21,7 +21,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 import MainCardDash from '../components/MainPage/MainCardDash'
 import TransactionHistoryDash from '../components/MainPage/TransactionHistoryDash'
 import ChartCard from '../components/MainPage/ChartCard'

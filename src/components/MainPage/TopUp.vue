@@ -1,8 +1,8 @@
 <template>
-  <div class="mt-4 ml-5 bg-white">
+  <div class="mt-4 bg-white overflow-auto h">
 
 <!-- ini ke bawah tinggal di hapus aja sisanya tinggal di looping -->
-        <ul class="list-group w-75 card-style pt-5 pb-5">
+        <ul class="list-group card-style pt-3 pb-3 mb-5 mr-5">
             <!-- ini jangan di looping ini untuk text yang di atas -->
             <div class="ml-2 pb-4 row">
                 <h4 class="col-12 ml-2 font-weight-bold">How To Top Up</h4>
@@ -149,6 +149,9 @@ export default {
 </script>
 
 <style>
+.h {
+    max-height: 680px;
+}
 h5 {
     font-size: 18px;
     line-height: 25px;

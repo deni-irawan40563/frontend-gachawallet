@@ -1,10 +1,10 @@
 <template>
-  <div class="mt-4 ml-5 bg-white">
+  <div class="mt-2 bg-white h overflow-auto">
 
 <!-- ini ke bawah tinggal di hapus aja sisanya tinggal di looping -->
-        <ul class="list-group w-75 card-style pt-5 pb-5">
+        <ul class="list-group card-style pt-3 pb-3 mb-5">
             <!-- ini jangan di looping ini untuk text yang di atas -->
-            <div class="ml-2 pb-4 row">
+            <div class="ml-1 pb-4 row">
                 <h4 class="col-12 ml-2">Search Receiver</h4>
                 <b-input-group class="col-12 pl-5 ml-n4">
                     <b-input-group-prepend>
@@ -14,7 +14,6 @@
                 </b-input-group>
             </div>
     <!-- sampai sini aja -->
-
             <li class="list-group-item border-0 mt-3 list-style ml-4 mr-4" v-b-toggle.collapse-1>
                 <b-card no-body class="overflow-hidden border-0">
                     <b-row no-gutters>
@@ -89,6 +88,24 @@
                 </b-card>
             </li>
 
+            <li class="list-group-item border-0 mt-3 list-style ml-4 mr-4">
+                <b-card no-body class="overflow-hidden border-0">
+                    <b-row no-gutters>
+                    <b-col md="1">
+                        <b-card-img src="https://ae01.alicdn.com/kf/HTB1SOJTaq61gK0jSZFlq6xDKFXaA/Three-Ratels-FTZ-7-20x10-6cm-xHamster-Logo-Vinyl-Window-Car-Sticker-Car-styling-Decal.jpg" class="rounded style-img mt-3 ml-3"></b-card-img>
+                    </b-col>
+                    <b-col md="6">
+                        <b-card-body>
+                        <b-card-text>
+                            <p class="mb-n1 style-p">Xhamter</p>
+                            <span class="text-muted style-span">+62 810-4224-4613</span>
+                        </b-card-text>
+                        </b-card-body>
+                    </b-col>
+                    </b-row>
+                </b-card>
+            </li>
+
         </ul>
   </div>
 </template>
@@ -104,6 +121,9 @@ export default {
 </script>
 
 <style>
+.h {
+    max-height: 680px;
+}
 .style-img {
     width: 52px;
     height: 52px;
