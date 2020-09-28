@@ -4,8 +4,8 @@
     <div class="card-body row">
         <div class="col-6">
             <p class="card-title style-p">Balance</p>
-            <h3 class="card-text style-h3">Rp120.000</h3>
-            <p class="card-title style-p">+62 813-9387-7946</p>
+            <h3 class="card-text style-h3">Rp{{saldo}}</h3>
+            <p class="card-title style-p">{{phoneNumber}}</p>
         </div>
         <div class="col-6 text-right mt-3">
             <button href="#" class="btn btn-primary buttom-style"><b-icon icon="arrow-up" class="icon-style"></b-icon>Transfer</button><br>
@@ -17,8 +17,18 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
-  name: 'maincarddash'
+  name: 'maincarddash',
+  computed: {
+    ...mapGetters({
+      saldo: 'saldo',
+      phoneNumber: 'phoneNumber'
+    })
+  },
+  methods: {
+    ...mapActions(['getUserId'])
+  }
 }
 </script>
 

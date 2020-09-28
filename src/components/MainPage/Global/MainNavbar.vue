@@ -4,10 +4,12 @@
             <span class="navbar-brand mb-0 h1 font-weight-bold text-primary pb-3 pt-3 brand-style">Gacha Wallet</span>
             <div class="mr-5">
                 <div class="mr-5 row">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBIAsNvIPQ89lhNbk72HrmU14-fIp6SjETkA&usqp=CAU" class="d-inline-block align-top style-img mr-3">
+                    <img v-if="userImage" :src="userImage" class="d-inline-block align-top style-img mr-3">
+                    <img v-else src="../../../assets/Profile/pp.png" class="d-inline-block align-top style-img mr-3">
                     <div class="text-style dropdown">
-                    <div class="font-weight-bold">Shigeo Tokuda</div>
-                    +62 8139 3877 7946
+                    <div v-if="name" class="font-weight-bold">{{name}}</div>
+                    <!-- +62 8139 3877 7946 -->
+                    {{phoneNumber}}
                     <a class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <b-icon icon="bell" variant="secondary" font-scale="2" class="ml-5 mt-n2"></b-icon> <!-- dropdown belum jalan -->
                     </a>
@@ -24,8 +26,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  name: 'mainnavbar'
+  name: 'mainnavbar',
+  computed: {
+    ...mapGetters({
+      user: 'user',
+      name: 'name',
+      userImage: 'userImage',
+      phoneNumber: 'phoneNumber'
+    })
+  }
 }
 </script>
 

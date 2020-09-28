@@ -87,6 +87,7 @@ export default {
 
       this.register(data).then((res) => {
         console.log('sukses register')
+        // alert('sukses register')
       })
     },
     onReset (evt) {
