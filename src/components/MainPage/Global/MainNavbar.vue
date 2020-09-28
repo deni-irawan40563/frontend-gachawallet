@@ -3,9 +3,9 @@
         <nav class="navbar navbar-light bg-white rounded-style">
             <span class="navbar-brand mb-0 h1 font-weight-bold text-primary pb-3 pt-3 brand-style logo">Gacha Wallet</span>
             <div>
-                <div class="mr-3 row">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBIAsNvIPQ89lhNbk72HrmU14-fIp6SjETkA&usqp=CAU" class="d-inline-block align-top style-img mr-3">
-                    <div class="text-style dropdown">
+                <div class="mr-3 row margin">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBIAsNvIPQ89lhNbk72HrmU14-fIp6SjETkA&usqp=CAU" class="d-inline-block align-top style-img">
+                    <div class="text-style dropdown margin">
                         <div class="font-weight-bold">Shigeo Tokuda</div>
                         +62 8139 3877 7946
                         <a class="dropdown-toggle logo" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -51,6 +51,9 @@ export default {
 @media (max-width: 576px) {
     .logo {
         display: none;
+    }
+    .margin {
+        margin-left: 20px;
     }
 }
 </style>
