@@ -82,4 +82,53 @@ h1 {
 .microsoft { background-image: url('../../assets/Landing/microsooft.png');}
 .dropbox { background-image: url('../../assets/Landing/dropbox.png');}
 .hm { background-image: url('../../assets/Landing/hm.png'); background-size: 100px;}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 700px;
+    }
+
+    .text-patners {
+        padding-left: 100px;
+    }
+  .logo-patners {
+      padding-top: 0px;
+      padding-left: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+      width: 250px;
+  }
+  .text {
+      width: 250px;
+  }
+  .text-patners {
+      padding-left: 20px;
+      margin-bottom: 10px;
+  }
+  h1 {
+      font-size: 40px;
+  }
+  .logo-patners {
+    padding-top: 0px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    width: 350px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 250px;
+    height: 90px;
+    display: flex;
+    background-size: 80px;
+    background-repeat: no-repeat;
+}
+}
 </style>
