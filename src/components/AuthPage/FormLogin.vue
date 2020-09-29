@@ -68,9 +68,14 @@ export default {
         password: this.form.password
       }
 
-      this.login(data).then((res) => {
-        this.$router.push('/main')
-      })
+      this.login(data)
+        .then((res) => {
+          this.$router.push('/main')
+        })
+        .catch((err) => {
+          // alert('password wrong!')
+          alert(err.response.data.result)
+        })
     },
     onReset (evt) {
       evt.preventDefault()
