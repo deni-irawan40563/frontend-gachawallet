@@ -44,19 +44,44 @@ export default {
   },
   computed: {
     ...mapGetters({
-      resetId: 'resetId'
+      resetId: 'resetId',
+      userEmail: 'userEmail'
     })
   },
   methods: {
     ...mapActions(['resetPassword']),
+    ...mapActions(['confirmPassword']),
+
     handleChangePassword () {
       const data = {
-        id: this.resetId,
-        password: this.newPassword
+        email: this.userEmail,
+        password: this.currentPassword
       }
-      this.resetPassword(data)
+      this.confirmPassword(data)
         .then((res) => {
-          alert('change password success')
+          if (res.data.result === 'Correct Password') {
+            if (this.newPassword.length >= 8) {
+              if (this.newPassword === this.repeatPassword) {
+                const newData = {
+                  id: this.resetId,
+                  password: this.newPassword
+                }
+                this.resetPassword(newData)
+                  .then((res) => {
+                    alert('change password success')
+                    this.currentPassword = ''
+                    this.newPassword = ''
+                    this.repeatPassword = ''
+                  })
+              } else {
+                alert('Repeat Password Wrong!')
+              }
+            } else {
+              alert('New Password lower than 8 char')
+            }
+          } else {
+            alert('Correct Password Wrong!')
+          }
         })
     }
   }

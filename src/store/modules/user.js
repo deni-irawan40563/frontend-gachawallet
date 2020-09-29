@@ -151,6 +151,18 @@ const user = {
     getResetId (setex, payload) {
       setex.commit('setResetId', payload)
       localStorage.setItem('resetId', payload)
+    },
+
+    confirmPassword (setex, payload) {
+      return new Promise((resolve, reject) => {
+        axios.post(process.env.VUE_APP_BASE_URL + '/users/confirmpassword/', payload)
+          .then((res) => {
+            resolve(res)
+          })
+          .catch((err) => {
+            reject(err)
+          })
+      })
     }
   },
   getters: {
