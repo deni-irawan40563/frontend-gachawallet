@@ -21,8 +21,18 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
-  name: 'maincarddash'
+  name: 'maincarddash',
+  computed: {
+    ...mapGetters({
+      saldo: 'saldo',
+      phoneNumber: 'phoneNumber'
+    })
+  },
+  methods: {
+    ...mapActions(['getUserId'])
+  }
 }
 </script>
 

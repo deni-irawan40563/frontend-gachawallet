@@ -10,7 +10,7 @@
               <h6>First Name</h6>
           </div>
           <div class="text2 ml-3">
-              <h5 class="font-weight-bolder">Robert</h5>
+              <h5 class="font-weight-bolder">{{firstName}}</h5>
           </div>
       </div>
       <div class="card mt-3">
@@ -18,7 +18,7 @@
               <h6>Last Name</h6>
           </div>
           <div class="text2 ml-3">
-              <h5 class="font-weight-bolder">Chandler</h5>
+              <h5 class="font-weight-bolder">{{lastName}}</h5>
           </div>
       </div>
       <div class="card mt-3">
@@ -26,7 +26,7 @@
               <h6>Verified E-mail</h6>
           </div>
           <div class="text2 ml-3">
-              <h5 class="font-weight-bolder">pewdiepie1@gmail.com</h5>
+              <h5 class="font-weight-bolder">{{userEmail}}</h5>
           </div>
       </div>
       <div class="card mt-3">
@@ -36,12 +36,12 @@
                     <h6>Phone Number</h6>
                   </div>
                   <div class="text2">
-                    <h5 class="font-weight-bolder">+62 813-9387-7946</h5>
+                    <h5 class="font-weight-bolder">{{phoneNumber}}</h5>
                   </div>
               </div>
             <div class="col-2 mt-3">
               <router-link to="/managePhoneNumber">
-                    Manage
+                   <span @click="handlePhone">Manage</span>
               </router-link>
             </div>
           </div>
@@ -50,8 +50,24 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
-  name: 'PersonalInfo'
+  name: 'PersonalInfo',
+  computed: {
+    ...mapGetters({
+      firstName: 'firstName',
+      lastName: 'lastName',
+      userEmail: 'userEmail',
+      phoneNumber: 'phoneNumber',
+      userId: 'userId'
+    })
+  },
+  methods: {
+    ...mapActions(['getPhoneUser']),
+    handlePhone () {
+      this.getPhoneUser(this.userId)
+    }
+  }
 }
 </script>
 

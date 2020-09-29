@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import MainCardDash from '../../../components/MainPage/MainCardDash'
 import ChartCard from '../../../components/MainPage/BarChart'
 import TransactionHistoryDash from '../../../components/MainPage/TransactionHistoryDash'
@@ -24,6 +25,15 @@ export default {
     MainCardDash,
     ChartCard,
     TransactionHistoryDash
+  },
+  computed: {
+    ...mapGetters({
+      userId: 'userId',
+      saldo: 'saldo'
+    })
+  },
+  methods: {
+    ...mapActions(['getUserId'])
   }
 }
 </script>

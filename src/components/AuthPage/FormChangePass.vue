@@ -11,7 +11,7 @@
             v-model="form.password"
             required
             placeholder="Enter your new password"
-            class=" border-0 col-11"
+            class=" border-0 col"
             ></b-form-input>
         </b-row>
         <div class="border-bottom"></div><!-- handle border bottom -->
@@ -27,7 +27,7 @@
             v-model="form.confirmPassword"
             required
             placeholder="Enter your confirm password"
-            class=" border-0 col-11"
+            class=" border-0 col"
             ></b-form-input>
         </b-row>
         <div class="border-bottom"></div><!-- handle border bottom -->
