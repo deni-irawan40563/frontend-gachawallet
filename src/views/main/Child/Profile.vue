@@ -26,11 +26,7 @@
         </div>
       </div>
       </router-link>
-<<<<<<< HEAD
-      <router-link to="/changePassword">
-=======
-      <a href="/changepasswordprofile">
->>>>>>> integrasi
+      <router-link to="/changepasswordprofile">
       <div class="menu row justify-content-center mt-3">
         <div class="card row justify-content-between">
           <div class="col-10 ml-0">

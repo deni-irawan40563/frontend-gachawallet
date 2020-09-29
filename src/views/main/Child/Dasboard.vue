@@ -22,12 +22,9 @@ import TransactionHistoryDash from '../../../components/MainPage/TransactionHist
 export default {
   name: 'dasboard',
   components: {
-<<<<<<< HEAD
     MainCardDash,
     ChartCard,
     TransactionHistoryDash
-=======
-    MainCardDash
   },
   computed: {
     ...mapGetters({
@@ -37,7 +34,6 @@ export default {
   },
   methods: {
     ...mapActions(['getUserId'])
->>>>>>> integrasi
   }
 }
 </script>
