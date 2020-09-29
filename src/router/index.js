@@ -93,7 +93,8 @@ const routes = [
     children: [
       {
         path: '/dasboard',
-        component: Dasboard
+        component: Dasboard,
+        meta: { requiresAuth: true }
       },
       {
         path: '/transfer',
@@ -155,7 +156,7 @@ router.beforeEach((to, from, next) => {
   } else if (to.matched.some(record => record.meta.requiresVisitor)) {
     if (store.getters.isLogin) {
       next({
-        path: '/main'
+        path: '/dasboard'
       })
     } else {
       next()

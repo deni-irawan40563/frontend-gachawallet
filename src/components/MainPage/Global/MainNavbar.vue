@@ -5,13 +5,13 @@
             <div>
                 <div class="mr-3 row margin">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBIAsNvIPQ89lhNbk72HrmU14-fIp6SjETkA&usqp=CAU" class="d-inline-block align-top style-img">
-                    <div class="text-style dropdown margin">
+                    <div class="text-style dropdown margin ml-2">
                         <div class="font-weight-bold">Shigeo Tokuda</div>
                         +62 8139 3877 7946
                         <a class="dropdown-toggle logo" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <b-icon icon="bell" variant="secondary" font-scale="2" class="ml-5 mt-n2"></b-icon> <!-- dropdown belum jalan -->
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdownMenuLink" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
                             <a class="dropdown-item" href="#">Something else here</a>

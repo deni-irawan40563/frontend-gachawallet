@@ -1,6 +1,6 @@
 <template>
-    <b-container class="bg-white ml-0 mt-4 h">
-            <b-list-group class="border-0 pt-3">
+    <b-container class="bg-white ml-0 h">
+            <b-list-group class="border-0 pt-4">
                 <router-link to="/dasboard" class="text-dark"><b-list-group-item class="border-0 mt-3"><b-icon icon="grid" variant="secondary" font-scale="1" class="mr-2"></b-icon>Dashboard</b-list-group-item></router-link>
                 <router-link to="/transfer" class="text-dark"><b-list-group-item class="border-0 mt-3"><b-icon icon="arrow-up" variant="secondary" font-scale="1" class="mr-2"></b-icon>Transfer</b-list-group-item></router-link>
                 <router-link to="/topup" class="text-dark"><b-list-group-item class="border-0 mt-3"><b-icon icon="plus" variant="secondary" font-scale="1" class="mr-2"></b-icon>Top Up</b-list-group-item></router-link>

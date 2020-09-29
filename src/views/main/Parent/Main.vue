@@ -6,10 +6,10 @@
     <div class="w-100"></div>
     <b-col>
       <b-row align-v="center">
-        <b-col md="3" class="side">
+        <b-col md="3" sm="12" class="side mt-2">
           <MainSidebar/>
         </b-col>
-        <b-col md="9" sm="12">
+        <b-col md="9" sm="12" class="router-style">
           <router-view/>
         </b-col>
       </b-row>
@@ -50,4 +50,9 @@ export default {
         display: none;
     }
 }
+/* @media (max-width: 720px) {
+    .router-style {
+      margin-left: 50px;
+    }
+} */
 </style>
