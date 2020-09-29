@@ -94,6 +94,8 @@ export default {
   methods: {
     ...mapActions(['getResetId']),
     ...mapActions(['updateUser']),
+    ...mapActions(['updateImage']),
+    ...mapActions(['getUserId']),
 
     handleChangePassword () {
       this.getResetId(this.userId)
@@ -117,23 +119,17 @@ export default {
       const formData = new FormData()
       formData.append('image', this.FILE, this.FILE.name)
 
-      const data = {
-        username: this.userName,
-        firstName: this.firstName,
-        lastName: this.lastName,
-        infoUser: this.infoUser,
-        image: formData.image
-      }
-
       const input = {
         id: this.userId,
-        data: data
+        data: formData
       }
 
-      this.updateUser(input)
+      this.updateImage(input)
         .then((res) => {
-          // console.log(formData.image.name)
-          alert('upload success')
+          this.getUserId(this.userId)
+            .then((res) => {
+              console.log('success')
+            })
         })
     }
   }

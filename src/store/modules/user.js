@@ -43,6 +43,15 @@ const user = {
     },
     setAllUser (state, payload) {
       state.allUser = payload
+    },
+    setUserImage (state, payload) {
+      state.userImage = payload
+    },
+    setFirstName (state, payload) {
+      state.firstName = payload
+    },
+    setLastName (state, payload) {
+      state.lastName = payload
     }
   },
   actions: {
@@ -151,6 +160,9 @@ const user = {
         axios.get(process.env.VUE_APP_BASE_URL + `/users/${payload}`)
           .then((res) => {
             console.log(res.data.result[0])
+            setex.commit('setFirstName', res.data.result[0].firstName)
+            setex.commit('setLastName', res.data.result[0].lastName)
+            setex.commit('setUserImage', res.data.result[0].image)
             setex.commit('setSaldo', res.data.result[0].saldo)
             localStorage.setItem('saldo', res.data.result[0].saldo)
             resolve(res)
@@ -180,6 +192,18 @@ const user = {
     updateUser (setex, payload) {
       return new Promise((resolve, reject) => {
         axios.patch(process.env.VUE_APP_BASE_URL + '/users/update/' + payload.id, payload.data)
+          .then((res) => {
+            resolve(res)
+          })
+          .catch((err) => {
+            reject(err)
+          })
+      })
+    },
+
+    updateImage (setex, payload) {
+      return new Promise((resolve, reject) => {
+        axios.patch(process.env.VUE_APP_BASE_URL + '/users/updateImage/' + payload.id, payload.data)
           .then((res) => {
             resolve(res)
           })
