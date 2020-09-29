@@ -6,7 +6,7 @@
             <h6 class="pt-3 text-center text-1">We have some great features from the application and it’s totally free to use by all users around the world.</h6>
         </div>
         <div class="flex-row mt-5 pt-5">
-          <div class="col-lg-4 border m-1 card">
+          <div class="col-sm-4 border m-1 card">
             <div class="icon call"></div>
             <div class="title mt-2"><h5 class="font-weight-bold">24/7 Support</h5></div>
             <div class="text1 mt-4 p-2"><h6>We have 24/7 contact support so you can contact us whenever you want and we will respond it</h6></div>
@@ -76,4 +76,40 @@ h1 {
 .lock { background-image:url('../../assets/Landing/lock.png');}
 .dl { background-image: url('../../assets/Landing/download.png');}
 
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .text-1 {
+    margin-left: 100px;
+  }
+
+  .flex-row {
+    width: 700px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    height: 900px;
+  }
+  .container {
+    max-width: 576px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .text-1 {
+    width: 300px;
+    margin: 0px;
+  }
+  .flex-row {
+    flex-direction: column !important;
+  }
+  .card {
+    width: 280px;
+    height: 150px;
+  }
+}
 </style>

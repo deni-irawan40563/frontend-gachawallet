@@ -73,4 +73,30 @@ span {
 .point {
     float: left;
 }
+
+@media (max-width: 768px) {
+  .handphone {
+      margin-left: 60px;
+  }
+  .feature {
+      max-width: 800px;
+      margin-right: 40px;
+  }
+  .card {
+      width: 550px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+      width: 250px;
+  }
+  .feature {
+      margin-top: 40px;
+      margin-left: 0px;
+  }
+  .card {
+      width: 250px;
+  }
+}
 </style>
