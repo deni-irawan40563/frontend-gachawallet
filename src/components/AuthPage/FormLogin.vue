@@ -29,7 +29,7 @@
             v-model="form.password"
             required
             placeholder="Enter your password"
-            class=" border-0 col-11"
+            class=" border-0 col"
             ></b-form-input>
         </b-row>
         <div class="border-bottom"></div><!-- handle border bottom -->
@@ -69,7 +69,7 @@ export default {
       }
 
       this.login(data).then((res) => {
-        this.$router.push('/')
+        this.$router.push('/main')
       })
     },
     onReset (evt) {

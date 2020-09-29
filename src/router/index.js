@@ -35,6 +35,7 @@ import Transfer from '../views/main/Child/Transfer.vue'
 import TopUp from '../views/main/Child/TopUp.vue'
 import Profile from '../views/main/Child/Profile.vue'
 import PersonalInfo from '../views/main/Child/PersonalInfo.vue'
+import ChangePasswordProfile from '../views/main/Child/ChangePassword.vue'
 import ChangePIN from '../views/main/Child/ChangePIN.vue'
 import ManagePhoneNumber from '../views/main/Child/ManagePhoneNumber.vue'
 import AddPhoneNumber from '../views/main/Child/AddPhoneNumber.vue'
@@ -76,7 +77,8 @@ const routes = [
   {
     path: '/',
     name: 'LandingPage',
-    component: LandingPage
+    component: LandingPage,
+    meta: { requiresVisitor: true }
   },
   {
     path: '/changepassword',
@@ -113,8 +115,8 @@ const routes = [
         component: PersonalInfo
       },
       {
-        path: '/changePassword',
-        component: ChangePassword
+        path: '/changepasswordprofile',
+        component: ChangePasswordProfile
       },
       {
         path: '/changePIN',

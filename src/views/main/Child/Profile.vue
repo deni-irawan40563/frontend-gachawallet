@@ -1,7 +1,8 @@
 <template>
   <div class="container p-5 justify-content-center">
       <div class="container-img row justify-content-center">
-        <img src="../../../assets/Landing/Rectangle 25.png" alt="">
+        <img v-if="userImage" :src="userImage" alt="">
+        <img v-else src="../../../assets/Profile/pp.png" alt="">
       </div>
       <div class="edit mt-2" @click="data">
           <div class="row justify-content-center m-1" >
@@ -10,8 +11,8 @@
           </div>
       </div>
       <div class="name justify-content-center mt-3">
-          <h3 class="font-weight-bolder">Robert Chandler</h3>
-          <h6 class="phone-num">+62 813-9387-7946</h6>
+          <h3 class="font-weight-bolder">{{name}}</h3>
+          <h6 class="phone-num">{{phoneNumber}}</h6>
       </div>
       <router-link to="/personalInfo">
       <div class="menu row justify-content-center mt-5">
@@ -25,11 +26,11 @@
         </div>
       </div>
       </router-link>
-      <router-link to="/changePassword">
+      <router-link to="/changepasswordprofile">
       <div class="menu row justify-content-center mt-3">
         <div class="card row justify-content-between">
           <div class="col-10 ml-0">
-              <h5 class="text-left pt-2">Change Password</h5>
+              <h5 class="text-left pt-2" @click="handleChangePassword">Change Password</h5>
           </div>
           <div class="col-2">
               <div class="arrow mt-2"></div>
@@ -63,8 +64,25 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
-  name: 'Profile'
+  name: 'Profile',
+  computed: {
+    ...mapGetters({
+      name: 'name',
+      userId: 'userId',
+      userImage: 'userImage',
+      phoneNumber: 'phoneNumber'
+    })
+  },
+  methods: {
+    ...mapActions(['getResetId']),
+    handleChangePassword () {
+      this.getResetId(this.userId)
+        .then((res) => {
+        })
+    }
+  }
 }
 </script>
 
