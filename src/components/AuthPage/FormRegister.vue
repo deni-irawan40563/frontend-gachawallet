@@ -76,6 +76,8 @@ export default {
   },
   methods: {
     ...mapActions(['register']),
+    ...mapActions(['getNewUser']),
+    ...mapActions(['pinOTP']),
 
     onSubmit (evt) {
       evt.preventDefault()
@@ -86,12 +88,20 @@ export default {
       }
 
       if (this.form.password.length >= 8) {
-        this.register(data).then((res) => {
-          alert(res.data.result)
-          this.form.username = ''
-          this.form.email = ''
-          this.form.password = ''
-        })
+        this.register(data)
+          .then((res) => {
+            this.getNewUser()
+              .then((res) => {
+                const id = res.data.result[0].id
+                this.pinOTP(id)
+                  .then((res) => {
+                    alert(res.data.message)
+                    this.form.username = ''
+                    this.form.email = ''
+                    this.form.password = ''
+                  })
+              })
+          })
       } else {
         alert('Password min 8 char')
       }

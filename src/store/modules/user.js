@@ -224,6 +224,44 @@ const user = {
             reject(new Error(err))
           })
       })
+    },
+
+    changePIN (setex, payload) {
+      return new Promise((resolve, reject) => {
+        axios.patch(process.env.VUE_APP_BASE_URL + `/users/setpin/${payload.id}`, payload.data)
+          .then((res) => {
+            resolve(res)
+          })
+          .catch((err) => {
+            reject(new Error(err))
+          })
+      })
+    },
+
+    pinOTP (setex, payload) {
+      return new Promise((resolve, reject) => {
+        axios.patch(process.env.VUE_APP_BASE_URL + `/users/pinOTP/${payload}`)
+          .then((res) => {
+            console.log(res.data.result)
+            resolve(res)
+          })
+          .catch((err) => {
+            reject(new Error(err))
+          })
+      })
+    },
+
+    getNewUser (setex, payload) {
+      return new Promise((resolve, reject) => {
+        axios.get(process.env.VUE_APP_BASE_URL + '/users/?sort=id&order=DESC')
+          .then((res) => {
+            console.log(res.data.result[0])
+            resolve(res)
+          })
+          .catch((err) => {
+            reject(new Error(err))
+          })
+      })
     }
   },
   getters: {
