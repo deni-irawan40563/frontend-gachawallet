@@ -63,5 +63,8 @@ export default {
     .logo {
         display: none;
     }
+    .margin {
+        margin-left: 20px;
+    }
 }
 </style>
