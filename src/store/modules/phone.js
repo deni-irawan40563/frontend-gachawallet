@@ -53,6 +53,30 @@ const phone = {
             reject(new Error(err))
           })
       })
+    },
+
+    updatePhone (setex, payload) {
+      return new Promise((resolve, reject) => {
+        axios.patch(process.env.VUE_APP_BASE_URL + `/phone/update/${payload.id}`, payload.data)
+          .then((res) => {
+            resolve(res)
+          })
+          .catch((err) => {
+            reject(new Error(err))
+          })
+      })
+    },
+
+    primary (setex, payload) {
+      return new Promise((resolve, reject) => {
+        axios.patch(process.env.VUE_APP_BASE_URL + `/phone/primary/${payload.id}`, payload.data)
+          .then((res) => {
+            resolve(res)
+          })
+          .catch((err) => {
+            reject(new Error(err))
+          })
+      })
     }
   },
   getters: {
