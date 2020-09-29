@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
     <b-container class="card mt-5 p-3">
         <b-row>
             <b-col>
@@ -13,23 +12,6 @@
             </b-col>
         </b-row>
     </b-container>
-=======
-  <div>
-    <div class="card w-75 mt-5 ml-5">
-    <div class="card-body row">
-        <div class="col-6">
-            <p class="card-title style-p">Balance</p>
-            <h3 class="card-text style-h3">Rp{{saldo}}</h3>
-            <p class="card-title style-p">{{phoneNumber}}</p>
-        </div>
-        <div class="col-6 text-right mt-3">
-            <button href="#" class="btn btn-primary buttom-style"><b-icon icon="arrow-up" class="icon-style"></b-icon>Transfer</button><br>
-            <button href="#" class="btn btn-primary mt-3 buttom-style pr-3"><b-icon icon="plus" class="ml-1 icon-style"></b-icon>Top Up</button>
-        </div>
-    </div>
-    </div>
-  </div>
->>>>>>> integrasi
 </template>
 
 <script>
