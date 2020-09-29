@@ -3,25 +3,38 @@
       <router-view />
       <div class="personal mb-5">
           <div class="title"><h4>Personal Information</h4></div>
-          <div class="text"><h6 class="text-left">We got your personal information from the sign up proccess. If you want to make changes on your information, contact our support.</h6></div>
+          <div class="text"><h6 class="text-left">We got your personal information from the sign<br>up proccess. If you want to make changes on<br>your information, contact our support.</h6></div>
       </div>
-      <div class="card">
+
+      <div class="card p-2">
           <div class="text1 ml-3">
-              <h6>First Name</h6>
+              <h6>First Name<b-button v-b-toggle.collapse-1 class="m-1 bg-transparent border-0 p-0"><b-icon icon="pencil-square" variant="primary"></b-icon></b-button></h6>
           </div>
           <div class="text2 ml-3">
               <h5 class="font-weight-bolder">{{firstName}}</h5>
           </div>
+          <div>
+            <b-collapse id="collapse-1">
+              <b-form-input v-model="text" placeholder="Enter your new first name"></b-form-input>
+            </b-collapse>
+          </div>
       </div>
-      <div class="card mt-3">
+
+      <div class="card mt-3 p-2">
           <div class="text1 ml-3">
-              <h6>Last Name</h6>
+              <h6>Last Name<b-button v-b-toggle.collapse-2 class="m-1 bg-transparent border-0 p-0"><b-icon icon="pencil-square" variant="primary"></b-icon></b-button></h6>
           </div>
           <div class="text2 ml-3">
               <h5 class="font-weight-bolder">{{lastName}}</h5>
           </div>
+          <div>
+            <b-collapse id="collapse-2">
+              <b-form-input v-model="text" placeholder="Enter your new last name"></b-form-input>
+            </b-collapse>
+          </div>
       </div>
-      <div class="card mt-3">
+
+      <div class="card mt-3 p-2">
           <div class="text1 ml-3">
               <h6>Verified E-mail</h6>
           </div>
@@ -29,9 +42,10 @@
               <h5 class="font-weight-bolder">{{userEmail}}</h5>
           </div>
       </div>
-      <div class="card mt-3">
+
+      <div class="card mt-3 p-2">
           <div class="row justify-content-between w-100">
-              <div class="col-8">
+              <div class="col-8 ml-3">
                   <div class="text1">
                     <h6>Phone Number</h6>
                   </div>
@@ -46,6 +60,7 @@
             </div>
           </div>
       </div>
+
   </div>
 </template>
 

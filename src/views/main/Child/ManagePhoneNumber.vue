@@ -7,21 +7,21 @@
 
       <div v-for="phone in phoneUser" :key="phone.id">
         <!-- Primary -->
-        <div v-if="phone.priority === '1'" class="card">
+        <div v-if="phone.priority === '1'" class="card p-2 mb-2">
           <div class="row justify-content-between w-100">
             <div class="col-10">
-              <h5 class="head"><p></p>Primary</h5>
+              <h5 class="head">Primary</h5>
               <h5 class="text-left">{{phone.phoneNumber}}</h5>
             </div>
             <div class="col-1">
               <b-button size="sm" class="mt-4" variant="outline-white">
-                <b-icon icon="trash" aria-hidden="true" variant="black"></b-icon>
+                <b-icon icon="trash" aria-hidden="true" variant="danger"></b-icon>
                 </b-button>
             </div>
           </div>
         </div>
         <!-- Secondary -->
-        <div v-else class="card">
+        <div v-else class="card p-2 mb-2">
           <div class="row justify-content-between w-100">
             <div class="col-10">
               <h5 class="head"><p></p>Secondary</h5>
@@ -29,7 +29,7 @@
             </div>
             <div class="col-1">
               <b-button size="sm" class="mt-4" variant="outline-white">
-                <b-icon icon="trash" aria-hidden="true" variant="black"></b-icon>
+                <b-icon icon="trash" aria-hidden="true" variant="danger"></b-icon>
                 </b-button>
             </div>
           </div>

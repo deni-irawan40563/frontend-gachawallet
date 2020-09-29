@@ -13,6 +13,22 @@
                 <b-card no-body class="overflow-hidden border-0">
                     <b-row no-gutters>
                     <b-col md="1" class="mt-4 ml-4">
+                        <h5>+ Top Up</h5>
+                    </b-col>
+                    <b-col md="6">
+                        <b-card-body>
+                            <b-form-input type="number" v-model="TopUp" placeholder="Masukan Jumlah Top Up disini"></b-form-input>
+                            <div class="mt-2">Rp. {{ TopUp }}</div>
+                        </b-card-body>
+                    </b-col>
+                    </b-row>
+                </b-card>
+            </li>
+
+            <li class="list-group-item border-0 mt-3 list-style ml-4 mr-4" v-b-toggle.collapse-1>
+                <b-card no-body class="overflow-hidden border-0">
+                    <b-row no-gutters>
+                    <b-col md="1" class="mt-4 ml-4">
                         <h5>1</h5>
                     </b-col>
                     <b-col md="6">
@@ -144,7 +160,12 @@
 
 <script>
 export default {
-  name: 'SearchReceiver'
+  name: 'SearchReceiver',
+  data () {
+    return {
+      TopUp: ''
+    }
+  }
 }
 </script>
 

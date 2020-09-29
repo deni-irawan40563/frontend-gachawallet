@@ -13,20 +13,20 @@
           </b-form-group>
           <b-form-group id="input-group-2" label-for="input-2" class="center w-50">
             <b-row>
-              <b-icon icon="lock" variant="secondary" class="col-2 mt-2"></b-icon>
+              <b-icon icon="unlock" variant="secondary" class="col-2 mt-2"></b-icon>
               <b-form-input v-model="newPassword" type="password" id="input-2" required placeholder="New password" class=" border-0 col-9"></b-form-input>
             </b-row>
             <div class="border-bottom"></div>
           </b-form-group>
           <b-form-group id="input-group-2" label-for="input-2" class="center w-50">
             <b-row>
-              <b-icon icon="lock" variant="secondary" class="col-2 mt-2"></b-icon>
+              <b-icon icon="unlock" variant="secondary" class="col-2 mt-2"></b-icon>
               <b-form-input v-model="repeatPassword" type="password" id="input-2" placeholder="Repeat new password" class=" border-0 col-9"></b-form-input>
             </b-row>
             <div class="border-bottom"></div>
           </b-form-group>
            <div class="row justify-content-center mt-5">
-            <button type="button" class="btn btn-light" @click="handleChangePassword">Change Password</button>
+            <button type="button" class="btn btn-light shadow border rounded" @click="handleChangePassword">Change Password</button>
            </div>
   </div>
 </template>

@@ -2,8 +2,8 @@
     <div class="fixed-bottom bg-primary">
         <b-navbar variant="faded" type="light" class="text-center">
             <b-navbar-brand  class="style-text">2020 Gacha Wallet. All right reserved.</b-navbar-brand>
-            <div class="contact">
-                <b-navbar-brand  class="style-text ml-auto">+62 5637 8882 9901</b-navbar-brand>
+            <div class="contact ml-auto">
+                <b-navbar-brand  class="style-text">+62 5637 8882 9901</b-navbar-brand>
                 <b-navbar-brand  class="style-text">contact@zwallet.com</b-navbar-brand>
             </div>
         </b-navbar>

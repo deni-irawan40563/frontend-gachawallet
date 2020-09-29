@@ -4,19 +4,40 @@
             <span class="navbar-brand mb-0 h1 font-weight-bold text-primary pb-3 pt-3 brand-style">Gacha Wallet</span>
             <div class="mr-5">
                 <div class="mr-5 row">
-                    <img v-if="userImage" :src="userImage" class="d-inline-block align-top style-img mr-3">
-                    <img v-else src="../../../assets/Profile/pp.png" class="d-inline-block align-top style-img mr-3">
-                    <div class="text-style dropdown">
-                    <div v-if="name" class="font-weight-bold">{{name}}</div>
+                        <img v-if="userImage" :src="userImage" class="d-inline-block align-top style-img mr-3">
+                        <img v-else src="../../../assets/Profile/pp.png" class="d-inline-block align-top style-img mr-3">
+                        <div class="text-style dropdown">
+                        <div v-if="name" class="font-weight-bold">{{name}}</div>
                     <!-- +62 8139 3877 7946 -->
-                    {{phoneNumber}}
+                    <router-link to="/managePhoneNumber" class="text-dark">{{phoneNumber}}</router-link>
+<!-- ini bagian untuk notifikasi dropdown transaksi yang dilakukan -->
                     <a class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <b-icon icon="bell" variant="secondary" font-scale="2" class="ml-5 mt-n2"></b-icon> <!-- dropdown belum jalan -->
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+<!-- ini adalah untuk styling jika notifikasinya ada tranfer atau segala transaksi yang menyebabkan saldo kita berkurang -->
+                        <div class="border-0">
+                                <b-row class="p-3" no-gutters>
+                                    <div class="col-3">
+                                        <b-icon icon="arrow-up" variant="danger"></b-icon>
+                                    </div>
+                                    <div class="col-9">
+                                        <small class="text-muted">Transfer</small>
+                                        <p class="font-weight-bold">-Rp20.000</p>
+                                    </div>
+                                </b-row>
+                        </div>
+<!-- ini adalah untuk styling jika notifikasinya ada Top Up atau segala transaksi yang menyebabkan saldo kita bertambah -->                             <div class="border-0">
+                                <b-row class="p-3" no-gutters>
+                                    <div class="col-3">
+                                        <b-icon icon="arrow-down" variant="success"></b-icon>
+                                    </div>
+                                    <div class="col-9">
+                                        <small class="text-muted">Top Up</small>
+                                        <p class="font-weight-bold">+Rp50.000</p>
+                                    </div>
+                                </b-row>
+                        </div>
                     </div>
                     </div>
                 </div>
