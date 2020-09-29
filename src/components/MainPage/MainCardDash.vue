@@ -3,8 +3,8 @@
         <b-row>
             <b-col>
                 <p class ="style-p">Balance</p>
-                <h3 class ="style-h3">Rp120.000</h3>
-                <p class ="style-p">+62 813-9387-7946</p>
+                <h3 class ="style-h3">Rp{{saldo}}</h3>
+                <p class ="style-p">{{phoneNumber}}</p>
             </b-col>
             <b-col class="col-md-6 col-sm-12 text-right mt-3">
                 <b-row>
