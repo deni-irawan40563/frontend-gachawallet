@@ -1,19 +1,23 @@
 <template>
-  <div>
-    <div class="card w-75 mt-5 ml-5">
-    <div class="card-body row">
-        <div class="col-6">
-            <p class="card-title style-p">Balance</p>
-            <h3 class="card-text style-h3">Rp{{saldo}}</h3>
-            <p class="card-title style-p">{{phoneNumber}}</p>
-        </div>
-        <div class="col-6 text-right mt-3">
-            <button href="#" class="btn btn-primary buttom-style"><b-icon icon="arrow-up" class="icon-style"></b-icon>Transfer</button><br>
-            <button href="#" class="btn btn-primary mt-3 buttom-style pr-3"><b-icon icon="plus" class="ml-1 icon-style"></b-icon>Top Up</button>
-        </div>
+    <div class="card mt-3 p-3 container ml-2">
+        <b-row>
+            <b-col>
+                <p class ="style-p">Balance</p>
+                <h3 class ="style-h3">Rp{{saldo}}</h3>
+                <p class ="style-p">{{phoneNumber}}</p>
+            </b-col>
+            <b-col class="col-md-6 col-sm-12 text-right mt-3">
+                <b-row>
+                    <b-col md="12" sm="5">
+                        <router-link to="/transfer" class="btn btn-primary buttom-style"><b-icon icon="arrow-up" class="icon-style"></b-icon>Transfer</router-link><br>
+                    </b-col>
+                    <b-col md="12" sm="5">
+                        <router-link to="/topup" class="btn btn-primary mt-3 buttom-style pr-3"><b-icon icon="plus" class="ml-1 icon-style"></b-icon>Top Up</router-link>
+                    </b-col>
+                </b-row>
+            </b-col>
+        </b-row>
     </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -64,5 +68,10 @@ export default {
     font-size: 40px;
     line-height: 55px;
     color: #FFFFFF;
+}
+@media (max-width: 576px) {
+    .buttom-style {
+        width: 100%;
+    }
 }
 </style>

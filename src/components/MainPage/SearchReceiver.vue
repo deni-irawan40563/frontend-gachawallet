@@ -2,7 +2,7 @@
   <div class="mt-2 bg-white h overflow-auto">
 
 <!-- ini ke bawah tinggal di hapus aja sisanya tinggal di looping -->
-        <ul class="list-group card-style pt-3 pb-3 mb-5">
+        <ul class="list-group card-style pt-3 pb-3 mb-5 mb-5">
             <!-- ini jangan di looping ini untuk text yang di atas -->
             <div class="ml-1 pb-4 row">
                 <h4 class="col-12 ml-2">Search Receiver</h4>
@@ -14,8 +14,8 @@
                 </b-input-group>
             </div>
     <!-- sampai sini aja -->
-            <li class="list-group-item border-0 mt-3 list-style ml-4 mr-4" v-b-toggle.collapse-1>
-                <b-card no-body class="overflow-hidden border-0">
+            <li class="list-group-item border-0 mt-3 list-style" v-b-toggle.collapse-1>
+                <b-card no-body class="overflow-auto border-0">
                     <b-row no-gutters>
                     <b-col md="1">
                         <b-card-img src="https://nywp.b-cdn.net/wp-content/uploads/2019/04/image-bintang-porno-sora-aoi-siarkan-langsung-kelahiran-bayinya.jpeg" class="rounded style-img mt-3 ml-3"></b-card-img>
@@ -34,7 +34,7 @@
             </li>
 <!-- sampai ini aja  -->
 
-            <li class="list-group-item border-0 mt-3 list-style ml-4 mr-4">
+            <li class="list-group-item border-0 mt-3 list-style">
                 <b-card no-body class="overflow-hidden border-0">
                     <b-row no-gutters>
                     <b-col md="1">
@@ -52,7 +52,7 @@
                 </b-card>
             </li>
 
-            <li class="list-group-item border-0 mt-3 list-style ml-4 mr-4">
+            <li class="list-group-item border-0 mt-3 list-style">
                 <b-card no-body class="overflow-hidden border-0">
                     <b-row no-gutters>
                     <b-col md="1">
@@ -70,7 +70,7 @@
                 </b-card>
             </li>
 
-            <li class="list-group-item border-0 mt-3 list-style ml-4 mr-4">
+            <li class="list-group-item border-0 mt-3 list-style">
                 <b-card no-body class="overflow-hidden border-0">
                     <b-row no-gutters>
                     <b-col md="1">
@@ -88,7 +88,7 @@
                 </b-card>
             </li>
 
-            <li class="list-group-item border-0 mt-3 list-style ml-4 mr-4">
+            <li class="list-group-item border-0 mt-3 list-style">
                 <b-card no-body class="overflow-hidden border-0">
                     <b-row no-gutters>
                     <b-col md="1">

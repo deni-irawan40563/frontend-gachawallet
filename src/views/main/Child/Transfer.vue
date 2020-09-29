@@ -1,6 +1,6 @@
 <template>
   <div>
-      <SearchReceiver class="mr-5"/>
+      <SearchReceiver/>
   </div>
 </template>
 

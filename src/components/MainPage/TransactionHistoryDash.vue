@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-2 bg-white">
+  <div class="mt-2 bg-white ml-3">
 
 <!-- ini ke bawah tinggal di hapus aja sisanya tinggal di looping -->
         <ul class="list-group card-style pt-3 pb-2">
@@ -13,10 +13,10 @@
             <li class="list-group-item border-0 mt-n4">
                 <b-card no-body class="overflow-hidden border-0">
                     <b-row no-gutters>
-                    <b-col md="2">
+                    <b-col sm="2">
                         <b-card-img src="https://nywp.b-cdn.net/wp-content/uploads/2019/04/image-bintang-porno-sora-aoi-siarkan-langsung-kelahiran-bayinya.jpeg" class="rounded style-img mt-3 ml-3"></b-card-img>
                     </b-col>
-                    <b-col md="6">
+                    <b-col sm="6">
                         <b-card-body>
                         <b-card-text>
                             <p class="mb-n1 style-p">Sora Aoi</p>
@@ -24,7 +24,7 @@
                         </b-card-text>
                         </b-card-body>
                     </b-col>
-                    <b-col md="4 mt-4">
+                    <b-col sm="4 mt-4">
                         <h5 class="style-h5">+Rp50.000</h5>
                     </b-col>
                     </b-row>

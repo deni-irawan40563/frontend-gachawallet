@@ -5,8 +5,8 @@
             <SideBarAuth /> <!-- sidebarAuth ada di folder src/components/SideBarAuth.vue -->
       </b-col>
 <!-- bagian sebelah kanan untuk form isian -->
-      <b-col cols="6" class="bg-white">
-          <b-container class="mt-5">
+      <b-col cols="6" class="bg-white responsive">
+          <b-container class="mt-5 margin">
                 <h2 class="font-h2">
                     Start Accessing Banking Needs<br>
                     With All Devices and All Platforms<br>
@@ -53,5 +53,26 @@ export default {
     font-size: 16px;
     line-height: 30px;
     color: rgba(58, 61, 66, 0.6);
+}
+
+@media (max-width: 768px) {
+  .backgroud {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  .backgroud {
+    visibility: hidden;
+  }
+  .responsive {
+    position: absolute;
+    min-width: 570px !important;
+    height: 100%;
+    justify-items: center;
+  }
+  .margin {
+    margin-left: 100px;
+  }
 }
 </style>
