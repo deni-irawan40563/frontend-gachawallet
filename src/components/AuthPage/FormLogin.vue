@@ -69,7 +69,7 @@ export default {
       }
 
       this.login(data).then((res) => {
-        this.$router.push('/')
+        this.$router.push('/main')
       })
     },
     onReset (evt) {

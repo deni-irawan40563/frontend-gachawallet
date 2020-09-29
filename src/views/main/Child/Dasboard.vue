@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import MainCardDash from '../../../components/MainPage/MainCardDash'
 import ChartCard from '../../../components/MainPage/BarChart'
 import TransactionHistoryDash from '../../../components/MainPage/TransactionHistoryDash'
@@ -21,9 +22,22 @@ import TransactionHistoryDash from '../../../components/MainPage/TransactionHist
 export default {
   name: 'dasboard',
   components: {
+<<<<<<< HEAD
     MainCardDash,
     ChartCard,
     TransactionHistoryDash
+=======
+    MainCardDash
+  },
+  computed: {
+    ...mapGetters({
+      userId: 'userId',
+      saldo: 'saldo'
+    })
+  },
+  methods: {
+    ...mapActions(['getUserId'])
+>>>>>>> integrasi
   }
 }
 </script>
