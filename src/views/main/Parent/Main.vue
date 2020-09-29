@@ -1,15 +1,15 @@
 <template>
-  <b-row>
+  <b-row align-v="center">
     <b-col>
         <MainNavbar class="col-12" />
     </b-col>
     <div class="w-100"></div>
     <b-col>
-      <b-row>
-        <b-col cols="3">
+      <b-row align-v="center">
+        <b-col md="3" sm="12" class="side mt-2">
           <MainSidebar/>
         </b-col>
-        <b-col cols="9">
+        <b-col md="9" sm="12" class="router-style">
           <router-view/>
         </b-col>
       </b-row>
@@ -45,4 +45,14 @@ export default {
   width: 900px;
   height: 600px;
 }
+@media (max-width: 576px) {
+    .side {
+        display: none;
+    }
+}
+/* @media (max-width: 720px) {
+    .router-style {
+      margin-left: 50px;
+    }
+} */
 </style>

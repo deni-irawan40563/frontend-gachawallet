@@ -2,7 +2,7 @@
   <div class="mt-2 bg-white h overflow-auto">
 
 <!-- ini ke bawah tinggal di hapus aja sisanya tinggal di looping -->
-        <ul class="list-group card-style pt-3 pb-3 mb-5">
+        <ul class="list-group card-style pt-3 pb-3 mb-5 mb-5">
             <!-- ini jangan di looping ini untuk text yang di atas -->
             <div class="ml-1 pb-4 row">
                 <h4 class="col-12 ml-2">Search Receiver</h4>

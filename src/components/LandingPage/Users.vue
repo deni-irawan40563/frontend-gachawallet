@@ -4,7 +4,7 @@
           <h1 class="font-weight-bolder">What Users are <span>Saying</span></h1>
           <div class="text mt-4"><h6>We have some great from the application and it's totally free to use by all users around the world.</h6></div>
       </div>
-      <div class="row mt-5 justify-content-between">
+      <div class="row mt-5 justify-content-between flex">
           <div class="col m-3 p-3 card border rounded">
               <div class="profile sherina"></div>
               <div class="name mt-5"><h5 class="font-weight-bolder">Sherina Chaw</h5></div>
@@ -60,4 +60,35 @@ span {
 .sherina { background-image: url('../../assets/Landing/1.png');}
 .jessica { background-image: url('../../assets/Landing/2.png'); }
 .robert { background-image: url('../../assets/Landing/Rectangle 25.png');}
+
+@media (max-width: 768px) {
+  .container {
+      max-width: 768px;
+      padding: 0;
+  }
+  .name {
+      margin: 5px !important;
+  }
+  .quote {
+      margin: 5px !important;
+  }
+}
+
+@media (max-width: 576px) {
+    .container {
+        height: 1110px;
+        margin: 20px;
+    }
+    .text {
+        width: 300px;
+    }
+  .flex {
+      display: flex;
+      flex-direction: column !important;
+  }
+  .card {
+      width: 250px !important;
+      height: 280px;
+  }
+}
 </style>

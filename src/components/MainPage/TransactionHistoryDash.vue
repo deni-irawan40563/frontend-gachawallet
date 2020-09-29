@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-2 bg-white">
+  <div class="mt-2 bg-white ml-3">
 
 <!-- ini ke bawah tinggal di hapus aja sisanya tinggal di looping -->
         <ul class="list-group card-style pt-3 pb-2 scroll">

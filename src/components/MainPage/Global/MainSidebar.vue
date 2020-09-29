@@ -53,9 +53,5 @@ ul li .style {
 .handle-buttom {
     margin-bottom: 0;
 }
-@media (max-width: 576px) {
-    .h {
-        display: none;
-    }
-}
+
 </style>
