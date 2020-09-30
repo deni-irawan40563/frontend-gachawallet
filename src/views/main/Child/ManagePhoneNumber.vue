@@ -3,6 +3,11 @@
       <div class="personal mb-5">
           <div class="title"><h4>Manage Phone Number</h4></div>
           <div class="text"><h6 class="text-left">You can only delete the phone number and then you must add another phone number.</h6></div>
+          <router-link to="/addPhoneNumber">
+          <b-button variant="primary" class="mb-2">
+             <b-icon icon="telephone-plus" aria-hidden="true"></b-icon>
+          </b-button>
+          </router-link>
       </div>
 
       <div v-for="phone in phoneUser" :key="phone.id">
