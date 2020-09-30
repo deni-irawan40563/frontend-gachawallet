@@ -10,112 +10,77 @@
                     <b-input-group-prepend>
                         <b-button class="bg-light border-0"><b-icon icon="search" variant="secondary"></b-icon></b-button>
                     </b-input-group-prepend>
-                    <b-form-input v-model="text" placeholder="Search receiver here" class="bg-light border-0"></b-form-input>
+                    <b-form-input v-model="search" @keyup.enter="handleSearch" placeholder="Search receiver here" class="bg-light border-0"></b-form-input>
                 </b-input-group>
             </div>
     <!-- sampai sini aja -->
-            <li class="list-group-item border-0 mt-3 list-style" v-b-toggle.collapse-1>
-                <b-card no-body class="overflow-auto border-0">
-                    <b-row no-gutters>
-                    <b-col md="1">
-                        <b-card-img src="https://nywp.b-cdn.net/wp-content/uploads/2019/04/image-bintang-porno-sora-aoi-siarkan-langsung-kelahiran-bayinya.jpeg" class="rounded style-img mt-3 ml-3"></b-card-img>
-                    </b-col>
-                    <b-col md="6">
-                        <b-card-body>
-                        <b-card-text>
-                            <p class="mb-n1 style-p">Sora Aoi</p>
-                            <span class="text-muted style-span">+62 813-8492-9994</span>
-                        </b-card-text>
-                        </b-card-body>
-                    </b-col>
-                    </b-row>
-                </b-card>
-                <Collapse /> <!-- handle collapse import dari component CobaCollapse -->
-            </li>
+            <div v-for="user in allPhoneUser" :key="user.id">
+                <div v-if="user.priority === '1' && user.idUser !== Number(userId)">
+                    <li class="list-group-item border-0 mt-3 list-style ml-4 mr-4">
+                    <!-- <li class="list-group-item border-0 mt-3 list-style ml-4 mr-4" v-b-toggle.collapse-1> -->
+                        <b-card no-body class="overflow-hidden border-0" @click="handleShow">
+                            <b-row no-gutters>
+                            <b-col md="1">
+                                <b-card-img :src="user.image" class="rounded style-img mt-3 ml-3"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                                <b-card-body>
+                                <b-card-text>
+                                    <p v-if="user.firstName" class="mb-n1 style-p">{{user.firstName}} {{user.lastName}}</p>
+                                    <p v-else class="mb-n1 style-p">{{user.username}}</p>
+                                    <span class="text-muted style-span">+{{user.phoneNumber}}</span>
+                                </b-card-text>
+                                </b-card-body>
+                            </b-col>
+                            </b-row>
+                        </b-card>
+                        <Collapse v-if="show" :idOther='user.idUser' /> <!-- handle collapse import dari component CobaCollapse -->
+                    </li>
+                </div>
+            </div>
 <!-- sampai ini aja  -->
-
-            <li class="list-group-item border-0 mt-3 list-style">
-                <b-card no-body class="overflow-hidden border-0">
-                    <b-row no-gutters>
-                    <b-col md="1">
-                        <b-card-img src="https://media.suara.com/pictures/970x544/2019/11/27/96566-maria-ozawa.jpg" class="rounded style-img mt-3 ml-3"></b-card-img>
-                    </b-col>
-                    <b-col md="6">
-                        <b-card-body>
-                        <b-card-text>
-                            <p class="mb-n1 style-p">Maria Ozawa</p>
-                            <span class="text-muted style-span">+62 812-4343-6731</span>
-                        </b-card-text>
-                        </b-card-body>
-                    </b-col>
-                    </b-row>
-                </b-card>
-            </li>
-
-            <li class="list-group-item border-0 mt-3 list-style">
-                <b-card no-body class="overflow-hidden border-0">
-                    <b-row no-gutters>
-                    <b-col md="1">
-                        <b-card-img src="https://4.bp.blogspot.com/-ObDOlXWk5hA/WMT5_3LM9tI/AAAAAAAANto/8jt5asPvvs0UX_Luu76Qai1lvjOae_hYgCLcB/s1600/s%2B%252813%2529.jpg" class="rounded style-img mt-3 ml-3"></b-card-img>
-                    </b-col>
-                    <b-col md="6">
-                        <b-card-body>
-                        <b-card-text>
-                            <p class="mb-n1 style-p">Momoka Nishina</p>
-                            <span class="text-muted style-span">+62 811-3452-5252</span>
-                        </b-card-text>
-                        </b-card-body>
-                    </b-col>
-                    </b-row>
-                </b-card>
-            </li>
-
-            <li class="list-group-item border-0 mt-3 list-style">
-                <b-card no-body class="overflow-hidden border-0">
-                    <b-row no-gutters>
-                    <b-col md="1">
-                        <b-card-img src="https://ae01.alicdn.com/kf/HTB1SOJTaq61gK0jSZFlq6xDKFXaA/Three-Ratels-FTZ-7-20x10-6cm-xHamster-Logo-Vinyl-Window-Car-Sticker-Car-styling-Decal.jpg" class="rounded style-img mt-3 ml-3"></b-card-img>
-                    </b-col>
-                    <b-col md="6">
-                        <b-card-body>
-                        <b-card-text>
-                            <p class="mb-n1 style-p">Xhamter</p>
-                            <span class="text-muted style-span">+62 810-4224-4613</span>
-                        </b-card-text>
-                        </b-card-body>
-                    </b-col>
-                    </b-row>
-                </b-card>
-            </li>
-
-            <li class="list-group-item border-0 mt-3 list-style">
-                <b-card no-body class="overflow-hidden border-0">
-                    <b-row no-gutters>
-                    <b-col md="1">
-                        <b-card-img src="https://ae01.alicdn.com/kf/HTB1SOJTaq61gK0jSZFlq6xDKFXaA/Three-Ratels-FTZ-7-20x10-6cm-xHamster-Logo-Vinyl-Window-Car-Sticker-Car-styling-Decal.jpg" class="rounded style-img mt-3 ml-3"></b-card-img>
-                    </b-col>
-                    <b-col md="6">
-                        <b-card-body>
-                        <b-card-text>
-                            <p class="mb-n1 style-p">Xhamter</p>
-                            <span class="text-muted style-span">+62 810-4224-4613</span>
-                        </b-card-text>
-                        </b-card-body>
-                    </b-col>
-                    </b-row>
-                </b-card>
-            </li>
-
         </ul>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import Collapse from '../MainPage/CobaCollapse'
 export default {
   name: 'SearchReceiver',
+  data () {
+    return {
+      show: false,
+      search: ''
+    }
+  },
   components: {
     Collapse
+  },
+  computed: {
+    ...mapGetters({
+      allPhoneUser: 'allPhoneUser',
+      userId: 'userId'
+    })
+  },
+  methods: {
+    ...mapActions(['getAllUser']),
+    ...mapActions(['searchPhoneUser']),
+
+    handleShow () {
+      if (this.show === false) {
+        this.show = true
+      } else {
+        this.show = false
+      }
+    },
+
+    handleSearch () {
+      this.searchPhoneUser(this.search)
+        .then((res) => {
+          console.log(res)
+        })
+    }
   }
 }
 </script>

@@ -6,19 +6,21 @@
           <div class="text"><h6 class="text-left">We got your personal information from the sign up proccess. If you want to make changes on your information, contact our support.</h6></div>
       </div>
       <div class="card">
-          <div class="text1 ml-3">
+          <div class="text1 ml-3" @click="openFN">
               <h6>First Name</h6>
           </div>
           <div class="text2 ml-3">
-              <h5 class="font-weight-bolder">{{firstName}}</h5>
+              <h5 v-if="showFN" class="font-weight-bolder">{{firstName}}</h5>
+              <input v-else v-model="inputFirstName" @keyup.enter="handleupdate" :placeholder="firstName"/>
           </div>
       </div>
       <div class="card mt-3">
-          <div class="text1 ml-3">
+          <div class="text1 ml-3" @click="openLN">
               <h6>Last Name</h6>
           </div>
           <div class="text2 ml-3">
-              <h5 class="font-weight-bolder">{{lastName}}</h5>
+              <h5 v-if="showLN" class="font-weight-bolder">{{lastName}}</h5>
+              <input v-else v-model="inputLastName" @keyup.enter="handleupdate" :placeholder="lastName"/>
           </div>
       </div>
       <div class="card mt-3">
@@ -53,19 +55,70 @@
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'PersonalInfo',
+  data () {
+    return {
+      showFN: true,
+      showLN: true,
+      inputFirstName: '',
+      inputLastName: ''
+    }
+  },
   computed: {
     ...mapGetters({
       firstName: 'firstName',
       lastName: 'lastName',
+      userName: 'userName',
       userEmail: 'userEmail',
       phoneNumber: 'phoneNumber',
-      userId: 'userId'
+      userId: 'userId',
+      infoUser: 'infoUser'
     })
   },
   methods: {
     ...mapActions(['getPhoneUser']),
+    ...mapActions(['updateUser']),
+    ...mapActions(['getUserId']),
+
     handlePhone () {
       this.getPhoneUser(this.userId)
+    },
+
+    handleupdate () {
+      const data = {
+        username: this.userName,
+        firstName: this.inputFirstName || this.firstName,
+        lastName: this.inputLastName || this.lastName,
+        infoUser: this.infoUser
+      }
+
+      const input = {
+        id: this.userId,
+        data: data
+      }
+
+      this.updateUser(input)
+        .then((res) => {
+          this.getUserId(this.userId)
+            .then((res) => {
+              this.showFN = true
+            })
+        })
+    },
+
+    openFN () {
+      if (this.showFN === true) {
+        this.showFN = false
+      } else {
+        this.showFN = true
+      }
+    },
+
+    openLN () {
+      if (this.showLN === true) {
+        this.showLN = false
+      } else {
+        this.showLN = true
+      }
     }
   }
 }

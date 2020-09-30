@@ -54,7 +54,7 @@
       </b-form-group>
         <b-button type="submit" variant="secondary" class="buttom-style mt-5" block >Sign Up</b-button>
         <div class="text-center mt-5">
-            <p>Already have an account? Let’s <router-link to="/">Login</router-link></p>
+            <p>Already have an account? Let’s <router-link to="/login">Login</router-link></p>
         </div>
     </b-form>
   </div>
@@ -76,6 +76,8 @@ export default {
   },
   methods: {
     ...mapActions(['register']),
+    ...mapActions(['getNewUser']),
+    ...mapActions(['pinOTP']),
 
     onSubmit (evt) {
       evt.preventDefault()
@@ -85,10 +87,24 @@ export default {
         password: this.form.password
       }
 
-      this.register(data).then((res) => {
-        console.log('sukses register')
-        // alert('sukses register')
-      })
+      if (this.form.password.length >= 8) {
+        this.register(data)
+          .then((res) => {
+            this.getNewUser()
+              .then((res) => {
+                const id = res.data.result[0].id
+                this.pinOTP(id)
+                  .then((res) => {
+                    alert(res.data.message)
+                    this.form.username = ''
+                    this.form.email = ''
+                    this.form.password = ''
+                  })
+              })
+          })
+      } else {
+        alert('Password min 8 char')
+      }
     },
     onReset (evt) {
       evt.preventDefault()

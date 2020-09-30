@@ -29,7 +29,8 @@ export default {
   computed: {
     ...mapGetters({
       userId: 'userId',
-      saldo: 'saldo'
+      saldo: 'saldo',
+      historyUser: 'historyUser'
     })
   },
   methods: {
