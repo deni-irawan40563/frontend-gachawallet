@@ -15,24 +15,15 @@
         <div v-if="phone.priority === '1'" class="card p-2 mb-2">
           <div class="row justify-content-between w-100">
             <div class="col-10">
-<<<<<<< HEAD
               <h5 class="head">Primary</h5>
               <h5 class="text-left">{{phone.phoneNumber}}</h5>
             </div>
             <div class="col-1">
               <b-button size="sm" class="mt-4" variant="outline-white">
-                <b-icon icon="trash" aria-hidden="true" variant="danger"></b-icon>
-=======
-              <h5 class="head"><p></p>Primary</h5>
-              <h5 v-if="showPrimary" class="text-left">{{phone.phoneNumber}}</h5>
-              <input v-else v-model="phonePrimary" @keyup.enter="handleUpdatePhone(phone.id)" :placeholder="phone.phoneNumber"/>
-            </div>
-            <div class="col-1">
-              <b-button size="sm" class="mt-4" variant="outline-white">
-                <b-icon icon="textarea-t" aria-hidden="true" variant="black" @click="handleUpdatePrimary"></b-icon>
-                <b-icon icon="trash" aria-hidden="true" variant="black"></b-icon>
->>>>>>> 976529deee296c94e48265d17fdff23e312f79a5
-                </b-button>
+                <b-icon icon="key" aria-hidden="true" variant="warning shadow-sm" class="bg-transparent" @click="handleSetPrimary(phone.id)"></b-icon>
+                <b-icon icon="textarea-t" aria-hidden="true" variant="success shadow-sm" class="bg-transparent" @click="handleUpdateSecondary"></b-icon>
+                <b-icon icon="trash" aria-hidden="true" variant="danger shadow-sm" class="bg-transparent"></b-icon>
+              </b-button>
             </div>
           </div>
         </div>
@@ -46,15 +37,10 @@
             </div>
             <div class="col-1">
               <b-button size="sm" class="mt-4" variant="outline-white">
-<<<<<<< HEAD
-                <b-icon icon="trash" aria-hidden="true" variant="danger"></b-icon>
-                </b-button>
-=======
-                <b-icon icon="key" aria-hidden="true" variant="black" @click="handleSetPrimary(phone.id)"></b-icon>
-                <b-icon icon="textarea-t" aria-hidden="true" variant="black" @click="handleUpdateSecondary"></b-icon>
-                <b-icon icon="trash" aria-hidden="true" variant="black"></b-icon>
+                <b-icon icon="key" aria-hidden="true" variant="warning shadow-sm" class="bg-transparent" @click="handleSetPrimary(phone.id)"></b-icon>
+                <b-icon icon="textarea-t" aria-hidden="true" variant="success shadow-sm" class="bg-transparent" @click="handleUpdateSecondary"></b-icon>
+                <b-icon icon="trash" aria-hidden="true" variant="danger shadow-sm" class="bg-transparent"></b-icon>
               </b-button>
->>>>>>> 976529deee296c94e48265d17fdff23e312f79a5
             </div>
           </div>
         </div>
