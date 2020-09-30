@@ -1,22 +1,18 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/joonacode/frontend-tokofuku.git">
-    <img src="https://github.com/joonacode/frontend-tokofuku/blob/master/logo.JPG" alt="Logo">
-  </a>
 
   <h1 align="center">frontend-GachaWallet</h1>
 
   <p align="center">
     <a href="https://tokofuku.fwdev.online/home">View Demo</a>
     ·
-    <a href="https://github.com/joonacode/frontend-tokofuku/issues">Report Bug</a>
+    <a href="https://github.com/deni-irawan40563/frontend-gachawallet/issues">Report Bug</a>
     ·
-    <a href="https://github.com/joonacode/frontend-tokofuku/issues">Request Feature</a>
+    <a href="https://github.com/deni-irawan40563/frontend-gachawallet/issues">Request Feature</a>
   </p>
 </p>
 
-![Image Banner](https://github.com/joonacode/frontend-tokofuku/blob/master/smartmockups_kf1u1m36.png)
 
 ## Table of Contents
 
@@ -33,20 +29,18 @@
 
 ## About The Project
 
-tokofuku is an online shop website that is made specifically for e-commerce purposes, for many features to support transactions in online stores
-[Demo Click Here](https://tokofuku.fwdev.online)
+Gacha Wallet is payment gateways website that makes it easy for users to make transactions online and make payments anytime and anywhere.
+This website also ensures your data is safe in our database and we will encrypt any data that you send to us.
 
 Here's why:
 
 - Great responsive display for any device
 - Does not reload pages when moving between pages
 - made with all the latest and most up-to-date tools and technology today
-- two role in login (custumer & seller)
 - great performance
-- specially designed for online shop needs
+- specially designed for payment gateways web needs
 - reusable components
 
-![Image Banner](https://github.com/joonacode/frontend-tokofuku/blob/master/smartmockups_kf1usoj7.jpg)
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
 
@@ -78,7 +72,7 @@ npm install npm@latest -g
 1. Clone the repo
 
 ```sh
-git clone https://github.com/joonacode/frontend-tokofuku.git
+git clone https://github.com/deni-irawan40563/frontend-gachawallet.git
 ```
 
 2. Install NPM packages
@@ -101,7 +95,7 @@ npm run serve
 
 ## Roadmap
 
-See the [open issues](https://github.com/joonacode/frontend-tokofuku/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/deni-irawan40563/frontend-gachawallet/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -123,23 +117,19 @@ Contributions are what make the open source community such an amazing place to b
 - [Vuex](https://vuex.vuejs.org/)
 - [Vue-Router](https://router.vuejs.org/)
 - [Core-js](https://www.npmjs.com/package/core-js)
-- [vue-currency-filter](https://www.npmjs.com/package/vue-currency-filter)
-- [vue-multiselect](https://www.npmjs.com/package/vue-multiselect)
-- [vue-owl-carousel](https://www.npmjs.com/package/xx-vue-owl-carousel)
-- [vue-sweetalert](https://www.npmjs.com/search?q=vue-sweetalert)
-- [vue-toast-notification](https://www.npmjs.com/package/vue-toast-notification)
-- [vue2-editor](https://www.npmjs.com/package/vue2-editor)
+- [vue-pincode-input](https://www.npmjs.com/package/vue-pincode-input)
+- [vue-chartjs](https://www.npmjs.com/package/vue-chartjs)
 
 
 ---
 
 ## Team
 
-> All Members of Default Team
+> All Members of Gacha Team
 
-| <a href="https://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html" target="_blank">**Front-End Developer**</a> | <a href="https://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html" target="_blank">**Full-Stack Developer & Team Leader**</a> | <a href="https://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html" target="_blank">**Front-End Developer**</a> | <a href="https://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html" target="_blank">**Front-End Developer**</a> | <a href="https://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html" target="_blank">**Back-End Developer**</a> | 
-| :---: |:---:| :---:|:---:| :---:|
-| [![Front-End Developer](https://avatars0.githubusercontent.com/u/60280044?s=460&u=27c0a4f18b0f83e3f4a89944d3942ad8a8459718&v=4)](http://fvcproductions.com)    | [![FVCproductions](https://avatars3.githubusercontent.com/u/57256855?s=460&u=098d4a10d90859d3581913797d790c1111ee71cb&v=4)](http://fvcproductions.com) | [![Full-Stack Developer](https://avatars2.githubusercontent.com/u/67103326?s=460&u=22d27ed3b3a748f40ace032f62ccc8d1cf54b745&v=4)](http://fvcproductions.com)  |[![Front-End Developer](https://avatars2.githubusercontent.com/u/67205885?s=460&v=4)](http://fvcproductions.com)    | [![FVCproductions](https://avatars0.githubusercontent.com/u/64903162?s=460&v=4)](http://fvcproductions.com) | [![Full-Stack Developer](https://avatars2.githubusercontent.com/u/67103326?s=460&u=22d27ed3b3a748f40ace032f62ccc8d1cf54b745&v=4)](http://fvcproductions.com)  |
-| <a href="https://github.com/deni-irawan40563" target="_blank">`https://github.com/deni-irawan40563`</a> | <a href="https://github.com/joonacode" target="_blank">`https://github.com/joonacode`</a> | <a href="https://github.com/alanard" target="_blank">`https://github.com/alanard`</a> | <a href="https://github.com/andriabakti" target="_blank">`https://github.com/andriabakti`</a> | <a href="https://github.com/SintaAnggunPuspita" target="_blank">`https://github.com/SintaAnggunPuspita`</a> |
+| <a href="https://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html" target="_blank">**Full-Stack Developer**</a> | <a href="https://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html" target="_blank">**Front-End Developer & Team Leader**</a> | <a href="https://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html" target="_blank">**Front-End Developer**</a> | 
+| :---: |:---:| :---:|
+| [![Full-Stack Developer](https://avatars3.githubusercontent.com/u/68485982?s=400&u=6df63039fd28fdc036e50ddecacab751aabf79f4&v=4)](http://fvcproductions.com)    | [![FVCproductions](https://avatars0.githubusercontent.com/u/60280044?s=460&u=27c0a4f18b0f83e3f4a89944d3942ad8a8459718&v=4)](http://fvcproductions.com) | [![Front-End Developer](https://avatars2.githubusercontent.com/u/67103326?s=460&u=22d27ed3b3a748f40ace032f62ccc8d1cf54b745&v=4)](http://fvcproductions.com)  | [![Front-End Developer](https://avatars0.githubusercontent.com/u/59290848?s=460&u=d47ea2848783d5cfbd1863da23d3384f45fc3236&v=4)
+| <a href="https://github.com/Ervin-Nurhediyanto" target="_blank">`https://github.com/Ervin-Nurhediyanto`</a> | <a href="https://github.com/deni-irawan40563" target="_blank">`https://github.com/deni-irawan40563`</a> | <a href="https://github.com/kemalreza12" target="_blank">`https://github.com/kemalreza12`</a> | 
 
 ---
