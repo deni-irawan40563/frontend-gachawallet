@@ -4,10 +4,16 @@
         <img v-if="userImage" :src="userImage" alt="">
         <img v-else src="../../../assets/Profile/pp.png" alt="">
       </div>
-      <div class="edit mt-2" @click="data">
+      <div class="edit mt-2">
           <div class="row justify-content-center m-1" >
-            <div class="pen"></div>
-            <h6>Edit</h6>
+              <div class="pen" @click="handleEdit"></div>
+              <h6 @click="handleEdit">Edit</h6>
+            <div v-if="uploadPhoto">
+              <form>
+                <input type="file" @change="onFileUpload" />
+                <button @click.prevent="handleUpload">Upload</button>
+              </form>
+            </div>
           </div>
       </div>
       <div class="name justify-content-center mt-3">
@@ -67,19 +73,63 @@
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'Profile',
+  data () {
+    return {
+      FILE: '',
+      uploadPhoto: false
+    }
+  },
   computed: {
     ...mapGetters({
       name: 'name',
       userId: 'userId',
       userImage: 'userImage',
-      phoneNumber: 'phoneNumber'
+      phoneNumber: 'phoneNumber',
+      firstName: 'firstName',
+      lastName: 'lastName',
+      userName: 'userName',
+      infoUser: 'infoUser'
     })
   },
   methods: {
     ...mapActions(['getResetId']),
+    ...mapActions(['updateUser']),
+    ...mapActions(['updateImage']),
+    ...mapActions(['getUserId']),
+
     handleChangePassword () {
       this.getResetId(this.userId)
         .then((res) => {
+        })
+    },
+
+    handleEdit () {
+      if (this.uploadPhoto === false) {
+        this.uploadPhoto = true
+      } else {
+        this.uploadPhoto = false
+      }
+    },
+
+    onFileUpload (event) {
+      this.FILE = event.target.files[0]
+    },
+
+    handleUpload () {
+      const formData = new FormData()
+      formData.append('image', this.FILE, this.FILE.name)
+
+      const input = {
+        id: this.userId,
+        data: formData
+      }
+
+      this.updateImage(input)
+        .then((res) => {
+          this.getUserId(this.userId)
+            .then((res) => {
+              console.log('success')
+            })
         })
     }
   }

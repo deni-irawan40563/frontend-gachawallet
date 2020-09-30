@@ -2,7 +2,7 @@
     <b-container class="bg-white ml-0 mt-4 h">
             <b-list-group class="border-0 pt-3">
                 <router-link to="/dasboard" class="text-dark"><b-list-group-item class="border-0 mt-3" @click="handleDasboard"><b-icon icon="grid" variant="secondary" font-scale="1" class="mr-2"></b-icon>Dashboard</b-list-group-item></router-link>
-                <router-link to="/transfer" class="text-dark"><b-list-group-item class="border-0 mt-3"><b-icon icon="arrow-up" variant="secondary" font-scale="1" class="mr-2"></b-icon>Transfer</b-list-group-item></router-link>
+                <router-link to="/transfer" class="text-dark"><b-list-group-item class="border-0 mt-3" @click="handleTransfer"><b-icon icon="arrow-up" variant="secondary" font-scale="1" class="mr-2"></b-icon>Transfer</b-list-group-item></router-link>
                 <router-link to="/topup" class="text-dark"><b-list-group-item class="border-0 mt-3"><b-icon icon="plus" variant="secondary" font-scale="1" class="mr-2"></b-icon>Top Up</b-list-group-item></router-link>
                 <router-link to="/profile" class="text-dark"><b-list-group-item class="border-0 mt-3"><b-icon icon="person" variant="secondary" font-scale="1" class="mr-2"></b-icon>Profile</b-list-group-item></router-link>
             </b-list-group>
@@ -24,6 +24,8 @@ export default {
   methods: {
     ...mapActions(['logout']),
     ...mapActions(['getUserId']),
+    ...mapActions(['getHistoryUser']),
+    ...mapActions(['getAllPhoneUser']),
 
     handleLogout () {
       this.logout().then((res) => {
@@ -31,6 +33,10 @@ export default {
     },
     handleDasboard () {
       this.getUserId(this.userId)
+      this.getHistoryUser(this.userId)
+    },
+    handleTransfer () {
+      this.getAllPhoneUser()
     }
   }
 }

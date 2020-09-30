@@ -5,7 +5,7 @@
     <img src="https://github.com/joonacode/frontend-tokofuku/blob/master/logo.JPG" alt="Logo">
   </a>
 
-  <h1 align="center">frontend-tokofuku</h1>
+  <h1 align="center">frontend-GachaWallet</h1>
 
   <p align="center">
     <a href="https://tokofuku.fwdev.online/home">View Demo</a>

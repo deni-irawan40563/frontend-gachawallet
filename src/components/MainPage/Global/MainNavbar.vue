@@ -27,7 +27,8 @@
                                     </div>
                                 </b-row>
                         </div>
-<!-- ini adalah untuk styling jika notifikasinya ada Top Up atau segala transaksi yang menyebabkan saldo kita bertambah -->                             <div class="border-0">
+<!-- ini adalah untuk styling jika notifikasinya ada Top Up atau segala transaksi yang menyebabkan saldo kita bertambah -->                             
+                        <div class="border-0">
                                 <b-row class="p-3" no-gutters>
                                     <div class="col-3">
                                         <b-icon icon="arrow-down" variant="success"></b-icon>
